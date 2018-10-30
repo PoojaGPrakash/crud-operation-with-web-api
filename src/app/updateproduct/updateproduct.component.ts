@@ -37,7 +37,7 @@ export class UpdateproductComponent implements OnInit {
       (res: Response) => {
         this.products = res.json();
         for(var i =0 ; i < this.products.length; i++) {
-          if(parseInt(this.products[i].id) === (this.id)) {
+          if(parseInt(this.products[i]) === this.id) {
             this.data = this.products[i];
             break;
           }
